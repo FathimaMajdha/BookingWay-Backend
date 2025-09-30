@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="DTOs\HotelBookingDto.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BookingApp.Domain\BookingApp.Domain.csproj" />
+	 
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="9.0.8" />
+    <PackageReference Include="Octokit" Version="14.0.0" />
+    <PackageReference Include="Razorpay" Version="3.3.2" />
+    <PackageReference Include="Refit" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>

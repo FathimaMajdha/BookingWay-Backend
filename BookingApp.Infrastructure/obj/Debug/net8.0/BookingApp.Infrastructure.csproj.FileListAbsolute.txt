@@ -1,0 +1,17 @@
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Infrastructure\bin\Debug\net8.0\BookingApp.Infrastructure.deps.json
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Infrastructure\bin\Debug\net8.0\BookingApp.Infrastructure.dll
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Infrastructure\bin\Debug\net8.0\BookingApp.Infrastructure.pdb
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Infrastructure\bin\Debug\net8.0\BookingApp.Application.dll
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Infrastructure\bin\Debug\net8.0\BookingApp.Domain.dll
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Infrastructure\bin\Debug\net8.0\BookingApp.Application.pdb
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Infrastructure\bin\Debug\net8.0\BookingApp.Domain.pdb
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Infrastructure\obj\Debug\net8.0\BookingApp.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Infrastructure\obj\Debug\net8.0\BookingApp.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Infrastructure\obj\Debug\net8.0\BookingApp.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Infrastructure\obj\Debug\net8.0\BookingApp.Infrastructure.AssemblyInfo.cs
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Infrastructure\obj\Debug\net8.0\BookingApp.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Infrastructure\obj\Debug\net8.0\BookingA.83823F6F.Up2Date
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Infrastructure\obj\Debug\net8.0\BookingApp.Infrastructure.dll
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Infrastructure\obj\Debug\net8.0\refint\BookingApp.Infrastructure.dll
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Infrastructure\obj\Debug\net8.0\BookingApp.Infrastructure.pdb
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Infrastructure\obj\Debug\net8.0\ref\BookingApp.Infrastructure.dll

@@ -1,0 +1,15 @@
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Application\bin\Release\net8.0\BookingApp.Application.deps.json
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Application\bin\Release\net8.0\BookingApp.Application.dll
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Application\bin\Release\net8.0\BookingApp.Application.pdb
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Application\bin\Release\net8.0\BookingApp.Domain.dll
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Application\bin\Release\net8.0\BookingApp.Domain.pdb
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Application\obj\Release\net8.0\BookingApp.Application.csproj.AssemblyReference.cache
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Application\obj\Release\net8.0\BookingApp.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Application\obj\Release\net8.0\BookingApp.Application.AssemblyInfoInputs.cache
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Application\obj\Release\net8.0\BookingApp.Application.AssemblyInfo.cs
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Application\obj\Release\net8.0\BookingApp.Application.csproj.CoreCompileInputs.cache
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Application\obj\Release\net8.0\BookingA.D01D291C.Up2Date
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Application\obj\Release\net8.0\BookingApp.Application.dll
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Application\obj\Release\net8.0\refint\BookingApp.Application.dll
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Application\obj\Release\net8.0\BookingApp.Application.pdb
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Application\obj\Release\net8.0\ref\BookingApp.Application.dll

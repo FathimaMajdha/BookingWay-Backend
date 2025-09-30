@@ -1,0 +1,12 @@
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Domain\bin\Debug\net8.0\BookingApp.Domain.deps.json
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Domain\bin\Debug\net8.0\BookingApp.Domain.dll
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Domain\bin\Debug\net8.0\BookingApp.Domain.pdb
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Domain\obj\Debug\net8.0\BookingApp.Domain.csproj.AssemblyReference.cache
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Domain\obj\Debug\net8.0\BookingApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Domain\obj\Debug\net8.0\BookingApp.Domain.AssemblyInfoInputs.cache
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Domain\obj\Debug\net8.0\BookingApp.Domain.AssemblyInfo.cs
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Domain\obj\Debug\net8.0\BookingApp.Domain.csproj.CoreCompileInputs.cache
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Domain\obj\Debug\net8.0\BookingApp.Domain.dll
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Domain\obj\Debug\net8.0\refint\BookingApp.Domain.dll
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Domain\obj\Debug\net8.0\BookingApp.Domain.pdb
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Domain\obj\Debug\net8.0\ref\BookingApp.Domain.dll
