@@ -27,7 +27,7 @@ namespace BookingApp.API.Controllers
             return Ok(result);
         }
 
-        // GET: api/similarproperty/5
+        
         [HttpGet("{id}")]
         public async Task<IActionResult> GetPropertyById(int id)
         {
@@ -39,7 +39,7 @@ namespace BookingApp.API.Controllers
             return Ok(result);
         }
 
-        // GET: api/similarproperty/similar/5
+        
         [HttpGet("similar/{hotelId}")]
         public async Task<IActionResult> GetSimilarProperties(int hotelId)
         {
@@ -51,7 +51,7 @@ namespace BookingApp.API.Controllers
             return Ok(result);
         }
 
-        // POST: api/similarproperty
+        
         [HttpPost]
         public async Task<IActionResult> AddProperty([FromBody] SimilarPropertyDto dto)
         {
@@ -66,7 +66,7 @@ namespace BookingApp.API.Controllers
             return CreatedAtAction(nameof(GetPropertyById), new { id = result.Data }, result);
         }
 
-        // PUT: api/similarproperty/5
+        
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateProperty(int id, [FromBody] SimilarPropertyDto dto)
         {
@@ -81,7 +81,7 @@ namespace BookingApp.API.Controllers
             return Ok(result);
         }
 
-        // DELETE: api/similarproperty/5
+        
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProperty(int id)
         {

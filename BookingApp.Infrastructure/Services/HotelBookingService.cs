@@ -18,7 +18,7 @@ namespace BookingApp.Infrastructure.Services
             _repository = repository;
         }
 
-        // UPDATE method signature to include userAuthId
+        
         public async Task<ApiResponse<int>> CreateBookingAsync(HotelBookingDto dto, int userAuthId)
         {
             if (dto == null)
@@ -35,7 +35,6 @@ namespace BookingApp.Infrastructure.Services
             }
         }
 
-        // ADD NEW METHOD FOR USER-SPECIFIC BOOKINGS
         public async Task<ApiResponse<IEnumerable<HotelBooking>>> GetBookingsByUserAsync(int userAuthId)
         {
             try
@@ -49,7 +48,6 @@ namespace BookingApp.Infrastructure.Services
             }
         }
 
-        // Rest of your existing methods remain the same...
         public async Task<ApiResponse<int>> UpdateBookingAsync(int bookingId, RazorpayVerificationRequest dto)
         {
             if (bookingId <= 0)

@@ -74,7 +74,7 @@ namespace BookingApp.Infrastructure.Repositories
             );
         }
 
-        // CORRECTED: Use the correct DTO type and stored procedure
+        
         public async Task<IEnumerable<AdminSimilarPropertyDto>> GetSimilarPropertiesAsync(int hotelId)
         {
             return await _connection.QueryAsync<AdminSimilarPropertyDto>(

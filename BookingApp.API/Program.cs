@@ -14,20 +14,20 @@ using BookingApp.Infrastructure.Services.Admin;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add CORS FIRST - before any other services
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
     {
         policy.WithOrigins(
-                "http://localhost:5173",    // Vite dev server
-                "http://localhost:3000",    // React dev server
-                "http://192.168.31.8",      // Your backend IP
-                "http://localhost"          // Localhost
+                "http://localhost:5173",    
+                "http://localhost:3000",    
+                "http://192.168.31.8",      
+                "http://localhost"          
             )
               .AllowAnyHeader()
               .AllowAnyMethod()
-              .AllowCredentials();  // Add this if you're using cookies/auth
+              .AllowCredentials();  
     });
 });
 
@@ -172,30 +172,23 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-// ========== BUILD THE APP ==========
 var app = builder.Build();
-// ===================================
 
-// ========== MIDDLEWARE CONFIGURATION ==========
-
-// 1. CORS first (use the policy you defined above)
 app.UseCors("AllowFrontend");
 
-// 2. Routing
+
 app.UseRouting();
 
-// 3. Authentication & Authorization
 app.UseAuthentication();
 app.UseAuthorization();
 
-// 4. Swagger
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
     c.SwaggerEndpoint("/swagger/v1/swagger.json", "BookingApp API v1");
 });
 
-// 5. Endpoints
+
 app.MapGet("/", context =>
 {
     context.Response.Redirect("/swagger");

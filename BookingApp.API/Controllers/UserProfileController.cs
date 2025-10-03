@@ -17,7 +17,7 @@ namespace BookingApp.API.Controllers
             _userProfileService = userProfileService;
         }
 
-        // GET: api/userprofile
+        
         [HttpGet]
         public async Task<IActionResult> GetAllUserProfiles()
         {
@@ -29,7 +29,7 @@ namespace BookingApp.API.Controllers
             return Ok(result);
         }
 
-        // GET: api/userprofile/my-profile
+        
         [HttpGet("my-profile")]
         public async Task<IActionResult> GetMyProfile()
         {
@@ -45,7 +45,7 @@ namespace BookingApp.API.Controllers
             return Ok(result);
         }
 
-        // GET: api/userprofile/auth/5
+        
         [HttpGet("auth/{userAuthId}")]
         public async Task<IActionResult> GetProfileByAuthId(int userAuthId)
         {
@@ -57,7 +57,7 @@ namespace BookingApp.API.Controllers
             return Ok(result);
         }
 
-        // POST: api/userprofile
+        
         [HttpPost]
         public async Task<IActionResult> AddUserProfile([FromForm] UserProfileDto user)
         {
@@ -76,7 +76,7 @@ namespace BookingApp.API.Controllers
             return CreatedAtAction(nameof(GetMyProfile), result);
         }
 
-        // PUT: api/userprofile
+        
         [HttpPut]
         public async Task<IActionResult> UpdateUserProfile([FromForm] UserProfileDto user)
         {
@@ -95,7 +95,7 @@ namespace BookingApp.API.Controllers
             return Ok(result);
         }
 
-        // DELETE: api/userprofile
+        
         [HttpDelete]
         public async Task<IActionResult> DeleteUserProfile()
         {
