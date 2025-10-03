@@ -17,17 +17,28 @@ namespace BookingApp.Infrastructure.Repositories
             _connection = connection;
         }
 
-        public async Task<int> AddBookingAsync(HotelBookingDto dto)
+        public async Task<int> AddBookingAsync(HotelBookingDto dto, int userAuthId)  
         {
             var json = JsonSerializer.Serialize(dto, new JsonSerializerOptions { PropertyNamingPolicy = null });
             return await _connection.ExecuteScalarAsync<int>(
                 "sp_HotelBooking",
-                new { Flag = 1, JSON = json },
+                new { Flag = 1, JSON = json, UserAuthId = userAuthId },  
                 commandType: CommandType.StoredProcedure
             );
         }
 
-        public async Task<int> UpdateBookingAsync(int bookingId, VerifyPaymentDto dto)
+        
+        public async Task<IEnumerable<HotelBooking>> GetBookingsByUserAsync(int userAuthId)
+        {
+            return await _connection.QueryAsync<HotelBooking>(
+                "sp_HotelBooking",
+                new { Flag = 6, UserAuthId = userAuthId },
+                commandType: CommandType.StoredProcedure
+            );
+        }
+
+        
+        public async Task<int> UpdateBookingAsync(int bookingId, RazorpayVerificationRequest dto)
         {
             var json = JsonSerializer.Serialize(dto, new JsonSerializerOptions { PropertyNamingPolicy = null });
             return await _connection.ExecuteScalarAsync<int>(

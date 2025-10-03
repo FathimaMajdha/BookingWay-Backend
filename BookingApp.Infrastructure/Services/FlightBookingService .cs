@@ -31,7 +31,7 @@ namespace BookingApp.Infrastructure.Services
             }
         }
 
-        public async Task<ApiResponse<int>> UpdateBookingAsync(int bookingId, VerifyPaymentDto dto)
+        public async Task<ApiResponse<int>> UpdateBookingAsync(int bookingId, RazorpayVerificationRequest dto)
         {
             try
             {

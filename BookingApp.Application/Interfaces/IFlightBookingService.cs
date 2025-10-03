@@ -13,7 +13,7 @@ namespace BookingApp.Application.Interfaces
     public interface IFlightBookingService
     {
         Task<ApiResponse<int>> CreateBookingAsync(FlightBookingDto dto);
-        Task<ApiResponse<int>> UpdateBookingAsync(int bookingId, VerifyPaymentDto dto);
+        Task<ApiResponse<int>> UpdateBookingAsync(int bookingId, RazorpayVerificationRequest dto);
         Task<ApiResponse<int>> DeleteBookingAsync(int bookingId);
         Task<ApiResponse<IEnumerable<FlightBooking>>> GetAllBookingsAsync();
         Task<ApiResponse<FlightBooking?>> GetBookingByIdAsync(int bookingId);

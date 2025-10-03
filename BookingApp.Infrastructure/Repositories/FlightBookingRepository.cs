@@ -32,7 +32,7 @@ namespace BookingApp.Infrastructure.Repositories
             );
         }
 
-        public async Task<int> UpdateBookingAsync(int bookingId, VerifyPaymentDto dto)
+        public async Task<int> UpdateBookingAsync(int bookingId, RazorpayVerificationRequest dto)
         {
             var json = JsonSerializer.Serialize(dto, new JsonSerializerOptions { PropertyNamingPolicy = null });
             return await _connection.ExecuteScalarAsync<int>(

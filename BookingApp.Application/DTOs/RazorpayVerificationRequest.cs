@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BookingApp.Application.DTOs
 {
-    public class VerifyPaymentDto
+    public class RazorpayVerificationRequest
     {
         public string RazorpayOrderId { get; set; }
         public string RazorpayPaymentId { get; set; }

@@ -1,15 +1,9 @@
 ﻿using BookingApp.Application.DTOs;
-using BookingApp.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace BookingApp.Application.Interfaces
+public interface IBookingRepository
 {
-    public interface IBookingRepository
-    {
-        Task<IEnumerable<MyBookingDto>> GetMyBookingsAsync(int userAuthId);
-    }
+    Task<IEnumerable<MyBookingDto>> GetMyBookingsAsync(int userAuthId);
+    Task<IEnumerable<MyBookingDto>> GetMyFlightBookingsAsync(int userAuthId);
+    Task<IEnumerable<MyBookingDto>> GetMyHotelBookingsAsync(int userAuthId);
+    Task<int> DeleteBookingAsync(int myBookingId, int userAuthId);
 }

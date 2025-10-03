@@ -15,3 +15,4 @@ C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Infrastructure\obj\Debug
 C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Infrastructure\obj\Debug\net8.0\refint\BookingApp.Infrastructure.dll
 C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Infrastructure\obj\Debug\net8.0\BookingApp.Infrastructure.pdb
 C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Infrastructure\obj\Debug\net8.0\ref\BookingApp.Infrastructure.dll
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Infrastructure\obj\Debug\net8.0\BookingApp.Infrastructure.sourcelink.json

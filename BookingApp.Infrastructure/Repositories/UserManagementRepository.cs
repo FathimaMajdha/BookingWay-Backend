@@ -14,7 +14,8 @@ namespace BookingApp.Infrastructure.Repositories
             _connection = connection;
         }
 
-        public async Task<PaginatedResponseDto<UserManagementDto>> GetUsersAsync(PaginationRequestDto request)
+       
+               public async Task<PaginatedResponseDto<UserManagementDto>> GetUsersAsync(PaginationRequestDto request)
         {
             try
             {
@@ -23,17 +24,14 @@ namespace BookingApp.Infrastructure.Repositories
                     new
                     {
                         Flag = 1,
-                       
                         PageNumber = request.PageNumber,
                         PageSize = request.PageSize,
-                        SearchTerm = request.SearchTerm,
-                        SortColumn = request.SortColumn,
-                        SortDirection = request.SortDirection
+                        SearchTerm = string.IsNullOrWhiteSpace(request.SearchTerm) ? null : request.SearchTerm,
+                        SortColumn = string.IsNullOrWhiteSpace(request.SortColumn) ? "Created_At" : request.SortColumn,
+                        SortDirection = string.IsNullOrWhiteSpace(request.SortDirection) ? "DESC" : request.SortDirection
                     },
                     commandType: CommandType.StoredProcedure
                 );
-
-              
                 var totalCount = await multi.ReadFirstOrDefaultAsync<int>();
 
                 

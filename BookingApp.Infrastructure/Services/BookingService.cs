@@ -1,8 +1,6 @@
 ﻿using BookingApp.Application.Common;
-using BookingApp.Application.DTO;
 using BookingApp.Application.DTOs;
 using BookingApp.Application.Interfaces;
-using BookingApp.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -22,13 +20,58 @@ namespace BookingApp.Infrastructure.Services
         {
             try
             {
-                var bookings = await _repository.GetMyBookingsAsync(userAuthId);
-                return ApiResponse<IEnumerable<MyBookingDto>>.SuccessResponse(bookings, "Bookings fetched successfully.");
+                var result = await _repository.GetMyBookingsAsync(userAuthId);
+                return ApiResponse<IEnumerable<MyBookingDto>>.SuccessResponse(result, "All bookings fetched successfully.");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error in GetMyBookingsAsync: {ex.Message}");
-                return ApiResponse<IEnumerable<MyBookingDto>>.FailResponse("Error fetching bookings.");
+                return ApiResponse<IEnumerable<MyBookingDto>>.FailResponse($"Error fetching bookings: {ex.Message}");
+            }
+        }
+
+        public async Task<ApiResponse<IEnumerable<MyBookingDto>>> GetMyFlightBookingsAsync(int userAuthId)
+        {
+            try
+            {
+                var result = await _repository.GetMyFlightBookingsAsync(userAuthId);
+                return ApiResponse<IEnumerable<MyBookingDto>>.SuccessResponse(result, "Flight bookings fetched successfully.");
+            }
+            catch (Exception ex)
+            {
+                return ApiResponse<IEnumerable<MyBookingDto>>.FailResponse($"Error fetching flight bookings: {ex.Message}");
+            }
+        }
+
+        public async Task<ApiResponse<IEnumerable<MyBookingDto>>> GetMyHotelBookingsAsync(int userAuthId)
+        {
+            try
+            {
+                var result = await _repository.GetMyHotelBookingsAsync(userAuthId);
+                return ApiResponse<IEnumerable<MyBookingDto>>.SuccessResponse(result, "Hotel bookings fetched successfully.");
+            }
+            catch (Exception ex)
+            {
+                return ApiResponse<IEnumerable<MyBookingDto>>.FailResponse($"Error fetching hotel bookings: {ex.Message}");
+            }
+        }
+
+        public async Task<ApiResponse<int>> DeleteBookingAsync(int myBookingId, int userAuthId)
+        {
+            try
+            {
+                var result = await _repository.DeleteBookingAsync(myBookingId, userAuthId);
+                if (result == 1)
+                {
+                    return ApiResponse<int>.SuccessResponse(result, "Booking deleted successfully.");
+                }
+                else
+                {
+                    return ApiResponse<int>.FailResponse("Failed to delete booking. Booking not found or you don't have permission.");
+                }
+            }
+            catch (Exception ex)
+            {
+                return ApiResponse<int>.FailResponse($"Error deleting booking: {ex.Message}");
             }
         }
     }

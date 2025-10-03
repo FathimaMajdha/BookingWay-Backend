@@ -1,14 +1,11 @@
-﻿using BookingApp.Application.DTOs;
+﻿using Microsoft.AspNetCore.Mvc;
 using BookingApp.Application.Interfaces;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+using BookingApp.Application.DTOs;
 
 namespace BookingApp.API.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
-   
+    [Route("api/[controller]")]
     public class AuthController : ControllerBase
     {
         private readonly IAuthService _authService;
@@ -17,34 +14,35 @@ namespace BookingApp.API.Controllers
         {
             _authService = authService;
         }
+
         
         [HttpPost("register")]
-        public async Task<IActionResult> Register(UserRegisterDto registerDto)
+        public async Task<IActionResult> Register([FromBody] UserRegisterDto registerDto)
         {
-            try
-            {
-                var response = await _authService.RegisterAsync(registerDto);
-                return Ok(response);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(new { message = ex.Message });
-            }
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var result = await _authService.RegisterAsync(registerDto);
+
+            if (!result.Success)
+                return BadRequest(result);
+
+            return Ok(result);
         }
 
+        
         [HttpPost("login")]
-
-        public async Task<IActionResult> Login(UserLoginDto loginDto)
+        public async Task<IActionResult> Login([FromBody] UserLoginDto loginDto)
         {
-            try
-            {
-                var response = await _authService.LoginAsync(loginDto);
-                return Ok(response);
-            }
-            catch (Exception ex)
-            {
-                return Unauthorized(new { message = ex.Message });
-            }
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var result = await _authService.LoginAsync(loginDto);
+
+            if (!result.Success)
+                return Unauthorized(result);
+
+            return Ok(result);
         }
     }
 }

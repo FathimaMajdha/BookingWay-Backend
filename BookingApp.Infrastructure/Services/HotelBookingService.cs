@@ -18,14 +18,15 @@ namespace BookingApp.Infrastructure.Services
             _repository = repository;
         }
 
-        public async Task<ApiResponse<int>> CreateBookingAsync(HotelBookingDto dto)
+        // UPDATE method signature to include userAuthId
+        public async Task<ApiResponse<int>> CreateBookingAsync(HotelBookingDto dto, int userAuthId)
         {
             if (dto == null)
                 return ApiResponse<int>.FailResponse("Booking data cannot be null.");
 
             try
             {
-                var result = await _repository.AddBookingAsync(dto);
+                var result = await _repository.AddBookingAsync(dto, userAuthId);
                 return ApiResponse<int>.SuccessResponse(result, "Hotel booking created successfully.");
             }
             catch (Exception ex)
@@ -34,7 +35,22 @@ namespace BookingApp.Infrastructure.Services
             }
         }
 
-        public async Task<ApiResponse<int>> UpdateBookingAsync(int bookingId, VerifyPaymentDto dto)
+        // ADD NEW METHOD FOR USER-SPECIFIC BOOKINGS
+        public async Task<ApiResponse<IEnumerable<HotelBooking>>> GetBookingsByUserAsync(int userAuthId)
+        {
+            try
+            {
+                var result = await _repository.GetBookingsByUserAsync(userAuthId);
+                return ApiResponse<IEnumerable<HotelBooking>>.SuccessResponse(result, "User hotel bookings fetched successfully.");
+            }
+            catch (Exception ex)
+            {
+                return ApiResponse<IEnumerable<HotelBooking>>.FailResponse($"Error fetching user bookings: {ex.Message}");
+            }
+        }
+
+        // Rest of your existing methods remain the same...
+        public async Task<ApiResponse<int>> UpdateBookingAsync(int bookingId, RazorpayVerificationRequest dto)
         {
             if (bookingId <= 0)
                 return ApiResponse<int>.FailResponse("Invalid booking Id.");

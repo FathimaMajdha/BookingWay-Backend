@@ -10,3 +10,4 @@ C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Domain\obj\Debug\net8.0\
 C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Domain\obj\Debug\net8.0\refint\BookingApp.Domain.dll
 C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Domain\obj\Debug\net8.0\BookingApp.Domain.pdb
 C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Domain\obj\Debug\net8.0\ref\BookingApp.Domain.dll
+C:\Users\majdha\OneDrive\Projects\BookingApp\BookingApp.Domain\obj\Debug\net8.0\BookingApp.Domain.sourcelink.json
